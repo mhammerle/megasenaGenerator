@@ -1,0 +1,11 @@
+<div>
+  <h2>Nossas chances de ganha são de {{ currentPossibilities }}%</h2>
+  <h2>Total de números sorteados: {{ totalNumbers }}</h2>
+  <h1>Número Sorteado: {{ pickedNumber }}</h1>
+  <input type="text" name="quant" value="1" #qnt><button (click)="raffle(qnt.value)" *ngIf="!maxNumberReached">Sortear</button>
+  <p *ngIf="maxNumberReached">Número máximo de sorteios alcançados</p>
+  <h2>Números Já Sorteados:</h2>
+  <div *ngFor="let number of selectedNumbers">
+   {{ number }}
+  </div>
+</div>
